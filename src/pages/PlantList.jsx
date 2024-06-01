@@ -2,7 +2,9 @@
 
 function PlantList() {
   return (
-    <div>PlantList</div>
+    <div>
+      <h1>Plant List</h1>
+    </div>
   )
 }
 
