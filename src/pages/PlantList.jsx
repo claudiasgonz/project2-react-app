@@ -25,7 +25,7 @@ function PlantList() {
   return (
     <div className="PlantListPage">
 
-      <h1>Plant List</h1>
+      <h1>Plants</h1>
         <div>
           {/* Render Plant Card for each Plant in Plant List */}
           {plants.map((plant) => {
