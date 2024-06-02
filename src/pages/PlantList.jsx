@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom"
 import PlantCard from "../components/PlantCard";
-import AddPlantForm from "../components/AddPlantForm";
+import AddPlantForm from "./AddPlantForm";
 
 function PlantList() {
   //Initial state, to be replaced by data from the API, once data is retrieved, it will be stored in this variable.
@@ -29,7 +29,7 @@ function PlantList() {
       <h1>Plants</h1>
         <div>
           {/* ADD PLANT BUTTON */}
-          <Link to="">
+          <Link to="/plants/add">
             <button>Add a New Plant</button>
           </Link>
         </div>
