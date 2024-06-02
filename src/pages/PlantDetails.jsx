@@ -49,9 +49,14 @@ function PlantDetails() {
             <li>Special Features: {plant.specialFeatures}</li>
           </p>
 
-           {/* Back button */}
+           {/* BACK BUTTON */}
            <Link to="/">
             <button>Back</button>
+          </Link>
+
+          {/* EDIT BUTTON */}
+          <Link to="">
+            <button>Edit</button>
           </Link>
         </>
       )}
