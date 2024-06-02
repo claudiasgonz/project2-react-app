@@ -2,3 +2,28 @@ body {
   font-family: monospace;
   text-align: center;
 }
+
+/* REMOVES HYPERLINK STYLES TO TEXT */
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* PLANT CARD RENDERED IN PLANT LIST PAGE*/
+.plant-card {
+  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 5px black;
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+  max-width: 250px;
+  display: inline-block;
+}
+.plant-card .plant-card-img{
+  max-width: 95%;
+  height: auto;
+  border-radius: 10%;
+  margin-bottom: 10px;
+}
+

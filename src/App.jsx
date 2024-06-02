@@ -6,8 +6,8 @@ import HomePage from "./pages/HomePage";
 import About from "./pages/About";
 import PlantList from "./pages/PlantList"
 import PlantDetails from "./pages/PlantDetails";
-import EditPlantForm from "./components/EditPlantForm";
 import NotFound from "./pages/NotFound";
+import EditPlantPage from "./pages/EditPlantForm";
 
 function App() {
   return (
@@ -19,6 +19,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/plants" element={<PlantList />} />
           <Route path="/plants/:plantId" element={<PlantDetails />} />
+          <Route path="/plants/edit/:plantId" element={<EditPlantPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
     </div>

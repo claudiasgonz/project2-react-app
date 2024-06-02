@@ -1,13 +1,14 @@
 import { useState, useEffect } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+
 
 function PlantDetails() {
   const [plant, setPlant] = useState();
   const { plantId } = useParams (); //useParams hook allows us to get plantId from the URL
-
+  const navigate = useNavigate();
   
-  //useEffect makes a request to get plant details from API, axios makes http request
+// GET SINGLE PLANT
   useEffect(() =>{
     const getSinglePlant = async () => {
       try {
@@ -20,6 +21,21 @@ function PlantDetails() {
     };
       getSinglePlant(); 
   }, [plantId]);
+
+// DELETE A PLANT
+const handleDelete = async () => {
+  try {
+    const confirmDelete = confirm ("Delete this plant?")
+
+    if (confirmDelete) {
+      const response = await axios.delete(`https://project2-react-app-server.adaptable.app/plants/${plantId}`);
+      console.log(response);
+      navigate("/plants");
+    }
+  } catch (error) {
+    console.log(error)
+  }
+};
 
   return (
     <div>
@@ -49,15 +65,20 @@ function PlantDetails() {
             <li>Special Features: {plant.specialFeatures}</li>
           </p>
 
-           {/* BACK BUTTON */}
+          {/* BACK BUTTON */}
            <Link to="/">
             <button>Back</button>
-          </Link>
+            </Link>
 
           {/* EDIT BUTTON */}
-          <Link to="">
+          <Link to={`/plants/edit/${plantId}`}>
             <button>Edit</button>
           </Link>
+
+          {/* DELETE BUTTON */}
+          <button onClick={handleDelete}>
+            Delete
+          </button>
         </>
       )}
     </div>
