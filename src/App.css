@@ -51,6 +51,13 @@ button:hover {
   background-color: greenyellow;
 }
 
+/* ABOUT PAGE */
+.about {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+}
 
 /* PLANT CARD RENDERED IN PLANT LIST PAGE */
 .plant-card {
