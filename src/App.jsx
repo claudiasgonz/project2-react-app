@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import { Route, Routes } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import About from "./pages/About";
@@ -24,6 +25,8 @@ function App() {
           <Route path="/plants/edit/:plantId" element={<EditPlantPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
+
+      <Footer />
     </div>
   );
 }
