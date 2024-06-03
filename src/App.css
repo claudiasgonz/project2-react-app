@@ -9,6 +9,22 @@ a {
   color: black;
 }
 
+/* BUTTONS */
+button {
+  background: white;
+  padding: 5px 20px;
+  border-radius: 50px;
+  border-width: 1px;
+  margin: 10px;
+  cursor: pointer;
+  display: inline-block;
+  font-family: monospace;
+}
+button:hover {
+  background-color: greenyellow;
+}
+
+
 /* PLANT CARD RENDERED IN PLANT LIST PAGE*/
 .plant-card {
   border: 1px solid black;
@@ -20,10 +36,26 @@ a {
   max-width: 250px;
   display: inline-block;
 }
-.plant-card .plant-card-img{
+.plant-card .plant-card-img {
   max-width: 95%;
   height: auto;
   border-radius: 10%;
   margin-bottom: 10px;
+}
+
+/* ADD PLANT FORM IN ADD PLANT PAGE*/
+.add-plant-page {
+  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 5px black;
+  padding: 20px;
+  margin: 10px;
+  text-align: left;
+  display: block;
+}
+.add-plant-page form {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
 }
 
