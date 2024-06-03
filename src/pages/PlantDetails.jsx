@@ -56,7 +56,7 @@ const handleDelete = async () => {
           <h1>{plant.plantName}</h1>
           <h2>{plant.scientificName}</h2>
           <p>{plant.description}</p>
-          <p>
+          <p className="plant-details-list">
             <li>☀️ Sun Requirements: {plant.sunlightRequirements}</li>
             <li>🌡️ Temperature / Climate: {plant.temperatureClimate}</li>
             <li>Watering Needs: {plant.wateringNeeds}</li>

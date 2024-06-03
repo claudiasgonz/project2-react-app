@@ -80,7 +80,7 @@ button:hover {
   margin-bottom: 10px;
 }
 .plant-card-heart-btn {
- 
+
 }
 
 /* PLANT DETAILS CARD RENDERED IN PLANT DETAILS PAGE */
@@ -91,16 +91,25 @@ button:hover {
   padding: 20px;
   margin: 10px;
   text-align: center;
-  max-width: 250px;
+  max-width: 900px;
   display: inline-block;
 }
+
 .plant-details-card .plant-details-card-img {
   max-width: 95%;
   height: auto;
   border-radius: 10%;
   margin-bottom: 10px;
 }
+/* PLANT DETAILS LIST RENDERED IN PLANT DETAILS CARD */
+.plant-details-list {
+  list-style-type: none;
+}
 
+.plant-details-list li {
+  margin-bottom: 10px;
+}
+.
 
 /* ADD PLANT FORM IN ADD PLANT PAGE*/
 /* EDIT PLANT FORM IN EDIT PLANT PAGE*/
