@@ -24,7 +24,14 @@ function PlantList() {
   }, [])
 
   return (
+    
     <div className="PlantListPage">
+    
+    {/* SEARCH BAR */}
+    <h2>Search</h2>
+    <input type="search" />
+    <br />
+    <br />
 
       <h1>Plants</h1>
         <div>
