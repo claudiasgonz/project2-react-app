@@ -18,3 +18,6 @@ function PlantCard({ plant }) {
 }
 
 export default PlantCard;
+
+// THIS COMPONENT RENDERS IN PLANT LIST PAGE
+// WIP: ADD LINK TO HEART BUTTON TO ADD PLANT TO FAV LIST

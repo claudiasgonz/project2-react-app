@@ -5,17 +5,19 @@ import PlantCard from "../components/PlantCard";
 import AddPlantPage from "./AddPlantPage";
 
 function PlantList() {
-  //Initial state, to be replaced by data from the API, once data is retrieved, it will be stored in this variable.
+  // INITIALIZE STATE TO STORE LIST OF PLANTS, ONCE DATA IS RETREIVED IT WILL BE STORED IN THIS VARIABLE
   const [plants, setPlants] = useState([]);
 
-  // useEffect hook makes request to the API and gets list with all plants
+  // FETCH LIST OF ALL PLANTS WHEN COMPONENT INITIALIZES, MAKE GET REQUEST TO FETCH ALL PLANTS
   useEffect(() =>{
     const getAllPlants = async () => {
       try {
         const response = await axios.get(`https://project2-react-app-server.adaptable.app/plants`) //axios makes http request
       
-        setPlants(response.data) //update the state with response data from Plants API
+        // UPDATE STATE WITH FETCHED DATA
+        setPlants(response.data)
       } catch (error) {
+        // LOG ANY ERRORS
         console.log(error)
       }
 

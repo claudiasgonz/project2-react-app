@@ -260,7 +260,8 @@ function EditPlantPage(props) {
           value={specialFeatures}
           onChange={(e) => setSpecialFeatures(e.target.value)}
         />
-
+        
+        {/* SUBMIT BUTTON */}
         <button type="submit">Update</button>
 
       </form>

@@ -4,17 +4,22 @@ import axios from "axios";
 
 
 function PlantDetails() {
+  // DEFINE STATE VARIABLE TO MANAGE PLANT DETAILS
   const [plant, setPlant] = useState();
-  const { plantId } = useParams (); //useParams hook allows us to get plantId from the URL
+
+  // EXTRACT PLANTID FROM URL USING USEPARAMS HOOK
+  const { plantId } = useParams (); 
+
+  // USE NAVIGATE HOOK TO NAVIGATE PROGRAMATICALLY
   const navigate = useNavigate();
   
-// GET SINGLE PLANT
+  // GET A PLANT , FETCH SINGLE PLANT DETAILS WHEN PLANTID CHANGES, GET REQUEST FETCHES PLANT DETAILS
   useEffect(() =>{
     const getSinglePlant = async () => {
       try {
         const response = await axios.get(`https://project2-react-app-server.adaptable.app/plants/${plantId}`);
       
-        setPlant(response.data); //response data from API updates the state
+        setPlant(response.data); // UPDATE STATE WITH FETCHED DATA
       } catch (error) {
         console.log(error)
       }
@@ -28,8 +33,11 @@ const handleDelete = async () => {
     const confirmDelete = confirm ("Delete this plant?")
 
     if (confirmDelete) {
+      // MAKE DELETE REQUEST
       const response = await axios.delete(`https://project2-react-app-server.adaptable.app/plants/${plantId}`);
       console.log(response);
+
+      // NAVIGATE TO PLANTS PAGE AFTER DELETION
       navigate("/plants");
     }
   } catch (error) {
@@ -40,6 +48,8 @@ const handleDelete = async () => {
   return (
     <div className="plant-details-card">
       <h1>Plant Details</h1>
+
+      {/* RENDER PLANT DETAILS IF PLANT DATA IS AVAILABLE */}
       {plant && (
         <>
           <img className="plant-details-card-img" src={plant.imageUrl}></img>
@@ -65,12 +75,12 @@ const handleDelete = async () => {
             <li>Special Features: {plant.specialFeatures}</li>
           </p>
 
-          {/* BACK BUTTON */}
+          {/* BACK BUTTON, NAVIGATES TO HOME */}
            <Link to="/">
             <button>Back</button>
             </Link>
 
-          {/* EDIT BUTTON */}
+          {/* EDIT BUTTON, NAVIGATES TO EDIT PLANT PAGE */}
           <Link to={`/plants/edit/${plantId}`}>
             <button>Edit</button>
           </Link>

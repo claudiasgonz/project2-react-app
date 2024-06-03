@@ -3,6 +3,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 function AddPlantPage(props) {
+    // DEFINE STATE VARIABLES TO MANAGE FORM INPUT VALUES
     const [plantName, setPlantName] = useState("");
     const [scientificName, setScientificName] = useState("");
     const [imageUrl, setImageUrl] = useState("");
@@ -26,9 +27,11 @@ function AddPlantPage(props) {
 
     const navigate = useNavigate();
 
+    // HANDLE FORM SUBMISSION
     const handleSubmit = async (e) => {
         e.preventDefault();
 
+    // SEND POST REQUEST TO SERVER TO ADD A NEW PLANT
         try {
             const response = await axios.post("https://project2-react-app-server.adaptable.app/plants", 
             {
@@ -55,13 +58,17 @@ function AddPlantPage(props) {
                 fertilizerNeeds,
                 specialFeatures,
             });
+            // LOG THE SERVER RESPONSE TO CONSOLE
             console.log(response);
+
+            // NAVIGATE TO "/PLANTS" PAGE AFTER SUCCESSFUL SUBMISSION
             navigate("/plants");
         } catch (error) {
             console.log(error)
         }
     };
 
+// RENDER THE FORM
   return (
     <div className="add-plant-page">
         <h1> Add plant page!!!</h1>
@@ -225,7 +232,7 @@ function AddPlantPage(props) {
           value={specialFeatures}
           onChange={(e) => setSpecialFeatures(e.target.value)}
         />
-
+        {/* SUBMIT BUTTON */}
         <button type="submit">Submit</button>
         </form>
     </div>
