@@ -59,22 +59,28 @@ button:hover {
   margin: 10px;
 }
 
+
 /* PLANT CARD RENDERED IN PLANT LIST PAGE */
 .plant-card {
   border: 1px solid black;
   border-radius: 10px;
   box-shadow: 5px black;
   padding: 20px;
-  margin: 10px;
+  margin: 15px;
   text-align: center;
-  max-width: 250px;
+  width: 250px;
+  height: 400px;
   display: inline-block;
+  vertical-align: top;
 }
 .plant-card .plant-card-img {
   max-width: 95%;
   height: auto;
   border-radius: 10%;
   margin-bottom: 10px;
+}
+.plant-card-heart-btn {
+ 
 }
 
 /* PLANT DETAILS CARD RENDERED IN PLANT DETAILS PAGE */
