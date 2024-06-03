@@ -25,7 +25,7 @@ button:hover {
 }
 
 
-/* PLANT CARD RENDERED IN PLANT LIST PAGE*/
+/* PLANT CARD RENDERED IN PLANT LIST PAGE */
 .plant-card {
   border: 1px solid black;
   border-radius: 10px;
@@ -42,6 +42,25 @@ button:hover {
   border-radius: 10%;
   margin-bottom: 10px;
 }
+
+/* PLANT DETAILS CARD RENDERED IN PLANT DETAILS PAGE */
+.plant-details-card {
+  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 5px black;
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+  max-width: 250px;
+  display: inline-block;
+}
+.plant-details-card .plant-details-card-img {
+  max-width: 95%;
+  height: auto;
+  border-radius: 10%;
+  margin-bottom: 10px;
+}
+
 
 /* ADD PLANT FORM IN ADD PLANT PAGE*/
 /* EDIT PLANT FORM IN EDIT PLANT PAGE*/

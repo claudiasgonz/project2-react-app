@@ -38,11 +38,11 @@ const handleDelete = async () => {
 };
 
   return (
-    <div>
-      <h1>PlantDetails</h1>
+    <div className="plant-details-card">
+      <h1>Plant Details</h1>
       {plant && (
         <>
-          <img src={plant.imageUrl}></img>
+          <img className="plant-details-card-img" src={plant.imageUrl}></img>
           <h1>{plant.plantName}</h1>
           <h2>{plant.scientificName}</h2>
           <p>{plant.description}</p>
