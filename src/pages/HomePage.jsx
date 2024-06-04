@@ -1,4 +1,4 @@
-
+import SearchBarHome from "../components/SearchBar";
 
 function Homepage() {
   return (
@@ -7,8 +7,8 @@ function Homepage() {
       
       <div className="search-bar-home">
         {/* SEARCH BAR */}
-        <h2>Explore</h2>
-        <input type="search" />
+        
+        <SearchBarHome />
       </div>
     </div>
   )

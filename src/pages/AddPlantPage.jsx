@@ -121,13 +121,13 @@ function AddPlantPage(props) {
                 onChange={(e) => setTemperatureClimate(e.target.value)}
             />
 
-        <label>Watering Needs:</label>
-        <input 
-          type="text"
-          name="wateringNeeds"
-          value={wateringNeeds}
-          onChange={(e) => setWateringNeeds(e.target.value)}
-        />
+            <label>Watering Needs:</label>
+            <input 
+                type="text"
+                name="wateringNeeds"
+                value={wateringNeeds}
+                onChange={(e) => setWateringNeeds(e.target.value)}
+            />
 
         <label>Soil Type:</label>
         <input 

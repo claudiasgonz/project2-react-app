@@ -90,8 +90,8 @@ button:hover {
   box-shadow: 5px black;
   padding: 20px;
   margin: 10px;
-  text-align: center;
-  max-width: 900px;
+  text-align: left;
+  max-width: 1000px;
   display: inline-block;
 }
 
