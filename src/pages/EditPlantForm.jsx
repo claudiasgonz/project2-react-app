@@ -99,7 +99,7 @@ function EditPlantPage(props) {
   // RENDER THE FORM
   return (
     <div className="edit-plant-page">
-      <h1>Edit Plant Form!!!</h1>
+      <h1>Edit Plant</h1>
 
       <form onSubmit ={handleFormSubmit}>
       <label>Plant Name:</label>
@@ -260,10 +260,11 @@ function EditPlantPage(props) {
           value={specialFeatures}
           onChange={(e) => setSpecialFeatures(e.target.value)}
         />
-        
-        {/* SUBMIT BUTTON */}
-        <button type="submit">Update</button>
 
+        <div className="submit-button-forms">
+          {/* SUBMIT BUTTON */}
+          <button type="submit">Update</button>
+        </div>
       </form>
     </div>
   )

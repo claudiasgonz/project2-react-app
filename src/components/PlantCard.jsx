@@ -11,13 +11,14 @@ function PlantCard({ plant }) {
       </Link>
 
       <div>
-      <Link to="">
-        <button
-          type= "button"
-          className="plant-card-heart-btn">
-          <p>+</p>
-        </button>
-      </Link>
+        <Link to="/favoriteplants">
+          <button
+            type= "button"
+            className="plant-card-heart-btn">
+            <p>+</p>
+          </button>
+        </Link>
+
       </div>
     </div>
   )

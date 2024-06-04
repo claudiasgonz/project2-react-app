@@ -53,7 +53,13 @@ button:hover {
 
 /* HOME PAGE */
 .select-home-pg {
-  padding: 100px;
+  padding: 150px;
+}
+.select-home-pg h2 {
+  text-align: left;
+}
+.select-home-pg p {
+  text-align: left;
 }
 
 /* ABOUT PAGE */
@@ -66,8 +72,8 @@ button:hover {
 
 /* PLANT LIST PAGE */
 .select-plant-list-pg {
-  padding-left: 200px;
-  padding-right: 200px;
+  padding-left: 150px;
+  padding-right: 150px;
 }
 
 /* PLANT CARD RENDERED IN PLANT LIST PAGE */
@@ -139,15 +145,41 @@ button:hover {
   border: 1px solid black;
   border-radius: 10px;
   box-shadow: 5px black;
-  padding: 20px;
-  margin: 10px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin: 50px;
   text-align: left;
   display: block;
 }
+
 .add-plant-page form,
 .edit-plant-page form {
   display: flex;
   flex-direction: column;
   align-items: left;
+  padding-left: 20px;
+}
+
+.add-plant-page form label,
+.edit-plant-page form label {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.add-plant-page form textarea,
+.edit-plant-page form textarea {
+  max-width: 100%;
+}
+
+.add-plant-page form input[type=text],
+.edit-plant-page form input[type=text] {
+  font-family: monospace;
+}
+
+.submit-button-forms {
+  margin-top: 10px;
+  align-self: flex-end;
 }
 
