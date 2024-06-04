@@ -10,13 +10,15 @@ function PlantCard({ plant }) {
         <p className="plant-card-description">{plant.description}</p>
       </Link>
 
+      <div>
       <Link to="">
         <button
           type= "button"
           className="plant-card-heart-btn">
-          <p>💚</p>
+          <p>+</p>
         </button>
       </Link>
+      </div>
     </div>
   )
 }

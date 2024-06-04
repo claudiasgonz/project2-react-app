@@ -47,15 +47,18 @@ const handleDelete = async () => {
 
   return (
     <div className="plant-details-card">
-      <h1>Plant Details</h1>
 
       {/* RENDER PLANT DETAILS IF PLANT DATA IS AVAILABLE */}
       {plant && (
         <>
           <img className="plant-details-card-img" src={plant.imageUrl}></img>
-          <h1>{plant.plantName}</h1>
-          <h2>{plant.scientificName}</h2>
-          <p>{plant.description}</p>
+          
+          <div className="plant-details-card-header-text">
+            <h1>{plant.plantName}</h1>
+            <h2>{plant.scientificName}</h2>
+            <p>{plant.description}</p>
+          </div>
+
           <p className="plant-details-list">
             <li>☀️ Sun Requirements: {plant.sunlightRequirements}</li>
             <li>🌡️ Temperature / Climate: {plant.temperatureClimate}</li>
@@ -75,20 +78,22 @@ const handleDelete = async () => {
             <li>Special Features: {plant.specialFeatures}</li>
           </p>
 
-          {/* BACK BUTTON, NAVIGATES TO HOME */}
-           <Link to="/">
-            <button>Back</button>
-            </Link>
+          <div className="plant-details-card-buttons">
+            {/* BACK BUTTON, NAVIGATES TO HOME */}
+              <Link to="/">
+              <button>Back</button>
+              </Link>
 
-          {/* EDIT BUTTON, NAVIGATES TO EDIT PLANT PAGE */}
-          <Link to={`/plants/edit/${plantId}`}>
-            <button>Edit</button>
-          </Link>
+            {/* EDIT BUTTON, NAVIGATES TO EDIT PLANT PAGE */}
+              <Link to={`/plants/edit/${plantId}`}>
+              <button>Edit</button>
+              </Link>
 
           {/* DELETE BUTTON */}
-          <button onClick={handleDelete}>
-            Delete
-          </button>
+            <button onClick={handleDelete}>
+              Delete
+            </button>
+          </div>
         </>
       )}
     </div>
