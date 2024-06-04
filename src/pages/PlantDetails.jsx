@@ -60,22 +60,86 @@ const handleDelete = async () => {
           </div>
 
           <p className="plant-details-list">
-            <li>☀️ Sun Requirements: {plant.sunlightRequirements}</li>
-            <li>🌡️ Temperature / Climate: {plant.temperatureClimate}</li>
-            <li>Watering Needs: {plant.wateringNeeds}</li>
-            <li>Soil Type: {plant.soilType}</li>
-            <li>Bloom Time: {plant.bloomTime}</li>
-            <li>Plant Height: {plant.plantHeight}</li>
-            <li>Plant Spread:{plant.plantSpread}</li>
-            <li>Growth Rate: {plant.growthRate}</li>
-            <li>USDA Hardiness Zone: {plant.hardinessZone}</li>
-            <li>Maintenance Level: {plant.maintenanceLevel}</li>
-            <li>Companion Plants: {plant.companionPlants}</li>
-            <li>Pests / Diseases: {plant.pestsDiseases}</li>
-            <li>Edible Parts: {plant.edibleParts}</li>
-            <li>Propagation Methods: {plant.propagationMethods}</li>
-            <li>Fertilizer Needs: {plant.fertilizerNeeds}</li>
-            <li>Special Features: {plant.specialFeatures}</li>
+            <li>
+              <img src=""></img>
+              <strong>Sun Requirements:</strong> 
+              {plant.sunlightRequirements}
+            </li>
+
+            <li>
+              <strong>🌡️ Temperature / Climate:</strong> 
+              {plant.temperatureClimate}
+            </li>
+
+            <li>
+              <strong>Watering Needs:</strong> 
+              {plant.wateringNeeds}
+            </li>
+
+            <li>
+              <strong>Soil Type:</strong> 
+              {plant.soilType}
+            </li>
+
+            <li>
+              <strong>Bloom Time:</strong> 
+              {plant.bloomTime}
+            </li>
+
+            <li>
+              <strong>Plant Height:</strong> 
+              {plant.plantHeight}
+            </li>
+
+            <li>
+              <strong>Plant Spread:</strong> 
+              {plant.plantSpread}
+            </li>
+
+            <li>
+              <strong>Growth Rate:</strong> 
+              {plant.growthRate}
+            </li>
+
+            <li>
+              <strong>USDA Hardiness Zone:</strong> 
+              {plant.hardinessZone}
+            </li>
+
+            <li>
+              <strong>Maintenance Level:</strong> 
+              {plant.maintenanceLevel}
+            </li>
+
+            <li>
+              <strong>Companion Plants:</strong> 
+              {plant.companionPlants}
+            </li>
+
+            <li>
+              <strong>Pests / Diseases:</strong> 
+              {plant.pestsDiseases}
+            </li>
+
+            <li>
+              <strong>Edible Parts:</strong> 
+              {plant.edibleParts}
+            </li>
+
+            <li>
+              <strong>Propagation Methods:</strong> 
+              {plant.propagationMethods}
+            </li>
+
+            <li>
+              <strong>Fertilizer Needs:</strong> 
+              {plant.fertilizerNeeds}
+            </li>
+
+            <li>
+              <strong>Special Features:</strong> 
+              {plant.specialFeatures}
+            </li>
           </p>
 
           <div className="plant-details-card-buttons">
