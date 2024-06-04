@@ -38,7 +38,7 @@ function SearchBarHome() {
 
   return (
     <div className="select-home-pg">
-      Explore
+      <h2>Explore</h2>
       <Select 
         options={options}
         onChange={handleSelect}

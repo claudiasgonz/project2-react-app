@@ -45,8 +45,6 @@ function AddPlantPage(props) {
                 soilType,
                 bloomTime,
                 plantHeight,
-                plantHeight,
-                plantHeight,
                 plantSpread,
                 growthRate,
                 hardinessZone,

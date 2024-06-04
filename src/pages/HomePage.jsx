@@ -3,11 +3,10 @@ import SearchBarHome from "../components/SearchBarHome";
 function Homepage() {
   return (
     <div>
-      <h1>Home page!!</h1>
       
+      
+      {/* SEARCH BAR */}
       <div className="search-bar-home">
-        {/* SEARCH BAR */}
-        
         <SearchBarHome />
       </div>
     </div>

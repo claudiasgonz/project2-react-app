@@ -36,7 +36,7 @@ function SearchBarPlantList() {
     });
     return (
         <div className="select-plant-list-pg">
-          Explore
+          <h2>Explore</h2>
           <Select 
             options={options}
             onChange={handleSelect}
