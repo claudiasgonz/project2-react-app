@@ -37,7 +37,7 @@ function SearchBarHome() {
 
 
   return (
-    <div className="select">
+    <div className="select-home-pg">
       Explore
       <Select 
         options={options}

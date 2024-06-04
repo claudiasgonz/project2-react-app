@@ -3,6 +3,7 @@ import axios from "axios";
 import { Link } from "react-router-dom"
 import PlantCard from "../components/PlantCard";
 import AddPlantPage from "./AddPlantPage";
+import SearchBarPlantList from "../components/SearchBarPlantList";
 
 function PlantList() {
   // INITIALIZE STATE TO STORE LIST OF PLANTS, ONCE DATA IS RETREIVED IT WILL BE STORED IN THIS VARIABLE
@@ -30,10 +31,7 @@ function PlantList() {
     <div className="PlantListPage">
     
     {/* SEARCH BAR */}
-    <h2>Search</h2>
-    <input type="search" />
-    <br />
-    <br />
+    <SearchBarPlantList />
 
       <h1>Plants</h1>
         <div>

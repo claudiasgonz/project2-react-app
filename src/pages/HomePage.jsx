@@ -1,4 +1,4 @@
-import SearchBarHome from "../components/SearchBar";
+import SearchBarHome from "../components/SearchBarHome";
 
 function Homepage() {
   return (
