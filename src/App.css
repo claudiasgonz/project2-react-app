@@ -1,6 +1,7 @@
 body {
   font-family: monospace;
   text-align: center;
+
 }
 
 /* REMOVES HYPERLINK STYLES TO TEXT */
@@ -40,7 +41,7 @@ footer:hover {
 button {
   background: white;
   padding: 5px 20px;
-  border-radius: 50px;
+  border-radius: 12px;
   border-width: 1px;
   margin: 10px;
   cursor: pointer;
@@ -89,6 +90,7 @@ button:hover {
   display: inline-block;
   vertical-align: top;
 }
+
 .plant-card .plant-card-img {
   width: 250px;
   height: 125px;
@@ -98,6 +100,7 @@ button:hover {
 }
 .plant-card-heart-btn {
   margin: 10px;
+  border-radius: 100%;
 }
 
 /* PLANT DETAILS CARD RENDERED IN PLANT DETAILS PAGE */

@@ -56,11 +56,12 @@ function AddPlantPage(props) {
                 fertilizerNeeds,
                 specialFeatures,
             });
+
             // LOG THE SERVER RESPONSE TO CONSOLE
             console.log(response);
 
             // NAVIGATE TO "/PLANTS" PAGE AFTER SUCCESSFUL SUBMISSION
-            navigate("/plants");
+            navigate("/comments");
         } catch (error) {
             console.log(error)
         }

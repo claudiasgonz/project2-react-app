@@ -1,51 +1,45 @@
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 
-function CommentCard({ comment }) {
-    console.log(comment)
+function CommentCard({ comment, plantId, getSinglePlant }) {
+  console.log(comment);
 
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
-
-// // DELETE A COMMENT
-const handleDelete = async () => {
+  // DELETE A COMMENT
+  const handleDelete = async () => {
     try {
-      const confirmDelete = confirm ("Delete this comment?")
-  
+      const confirmDelete = confirm("Delete this comment?");
+
       if (confirmDelete) {
         // MAKE DELETE REQUEST
-        const response = await axios.delete(`https://project2-react-app-server.adaptable.app/comments/${comment.id}`);
+        const response = await axios.delete(
+          `https://project2-react-app-server.adaptable.app/comments/${comment.id}`
+        );
         console.log(response);
-  
-        // NAVIGATE TO PLANTS PAGE AFTER DELETION
-        navigate(`/plants/${plantId}`);
+
+        getSinglePlant();
       }
     } catch (error) {
-      console.log("Error deleting comment", error)
+      console.log("Error deleting comment", error);
     }
   };
   return (
     // RENDER COMMENT CARD
     <div className="comment-card">
-    
-        <h3>{comment.title}</h3>
-        <h4>{comment.username}</h4>
-        <p>{comment.text}</p>
-    
+      <h3>{comment.title}</h3>
+      <h4>{comment.username}</h4>
+      <p>{comment.text}</p>
 
-            {/* DELETE BUTTON */}
-            <button onClick={handleDelete}>
-              Delete
-            </button>
+      {/* DELETE BUTTON */}
+      <button onClick={handleDelete}>Delete</button>
 
-            <Link>
-            <button>
-                Edit
-            </button>
-            </Link>
+      <Link>
+        <button>Edit</button>
+      </Link>
     </div>
-  )
+  );
 }
 
-export default CommentCard
+export default CommentCard;

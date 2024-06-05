@@ -15,7 +15,7 @@ function PlantCard({ plant }) {
           <button
             type= "button"
             className="plant-card-heart-btn">
-            <p>+</p>
+            <p></p>
           </button>
         </Link>
 
