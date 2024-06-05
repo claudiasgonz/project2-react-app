@@ -12,7 +12,7 @@ function PlantDetails(props) {
   // EXTRACT PLANTID FROM URL USING USEPARAMS HOOK
   const { plantId } = useParams (); 
 
-  // USE NAVIGATE HOOK TO NAVIGATE PROGRAMATICALLY
+  // USE NAVIGATE HOOK TO NAVIGATE 
   const navigate = useNavigate();
   
   // GET A PLANT , FETCH SINGLE PLANT DETAILS WHEN PLANTID CHANGES, GET REQUEST FETCHES PLANT DETAILS
@@ -160,17 +160,20 @@ const handleDelete = async () => {
               Delete
             </button>
           </div>
-          
-          {/* <AddCommentForm refreshPlant={getSinglePlant} plantId={plantId} /> */}
+          <div>
 
-            {plant && plant.comments.length &&
+          {/* COMMENTS LIST */}
+              <h2>Comments</h2>
+             {plant && plant.comments.length &&
               plant.comments.map((comment) => (
-                <CommentCard comment={comment}/>
+                <CommentCard key={comment.id} comment={comment}/>
               ))
             }
 
-          {/* COMMENTS SECTION */}
+          {/* ADD COMMENT SECTION */}
           <AddCommentForm plantId={plant.id}/>
+          </div>
+        
         </>
       )}
     </div>

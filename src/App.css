@@ -103,13 +103,15 @@ button:hover {
 /* PLANT DETAILS CARD RENDERED IN PLANT DETAILS PAGE */
 .plant-details-card {
   border: 1px solid black;
-  border-radius: 10%;
+  border-radius: 10px;
   box-shadow: 5px black;
-  margin: 10px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin: 50px;
   text-align: left;
-  width: 1000px;
-  height: 1090px;
-  display: inline-block;
+  display: block;
 }
 
 .plant-details-card-img {
@@ -131,8 +133,7 @@ button:hover {
 }
 .plant-details-card-buttons {
   display: flex;
-  justify-content: flex-end;
-  padding-right: 80px;
+  justify-content: center;
   padding-bottom: 20px;
   padding-top: 10px;
 }
@@ -153,8 +154,6 @@ button:hover {
   padding: 30px;
   margin: 15px;
   text-align: left;
-  max-width: 400px;
-  max-height: 250px;
 }
 .comment-card h3 {
   margin: 20px;
@@ -167,6 +166,7 @@ button:hover {
 .comment-card p {
   margin: 20px;
   text-align: left;
+  display: flex; /**/
 }
 /* ADD A COMMENT FORM */
 .add-comment-form {
@@ -176,8 +176,17 @@ button:hover {
   margin: 10px;
   display: flex;
   flex-direction: column;
-  align-items: left;
+  text-align: left;
+  align-items: flex-start;
   padding-left: 20px;
+}
+
+.add-comment-form label,
+.add-comment-form input,
+.add-comment-form textarea {
+  width: 95%;
+  margin-bottom: 10px;
+  font-family: monospace;
 }
 
 /* ADD PLANT FORM IN ADD PLANT PAGE*/

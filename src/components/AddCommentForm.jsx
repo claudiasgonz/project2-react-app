@@ -26,7 +26,7 @@ function AddCommentForm(props) {
                 props.refreshPlant();
             console.log(response);
 
-            navigate(`/plants/${plantId}?_embed=comments`);
+            navigate(`/plants`);
         } catch (error) {
         console.log(error)
         }
@@ -53,7 +53,7 @@ function AddCommentForm(props) {
                 />
             
             <label>Comment:</label>
-                <input
+                <textarea
                     type="text"
                     name="text"
                     value={text}
@@ -62,8 +62,9 @@ function AddCommentForm(props) {
             
             <button>Cancel</button>
             
-            <button type="submit">Submit Comment!</button>
-
+            <button type="submit">
+            Submit Comment
+            </button>
         </form>   
     </div>
   )

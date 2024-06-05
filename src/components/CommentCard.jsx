@@ -1,27 +1,30 @@
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { Link } from "react-router-dom"
 
 function CommentCard({ comment }) {
     console.log(comment)
 
+    const navigate = useNavigate();
+
 
 // // DELETE A COMMENT
-// const handleDelete = async () => {
-//     try {
-//       const confirmDelete = confirm ("Delete this comment?")
+const handleDelete = async () => {
+    try {
+      const confirmDelete = confirm ("Delete this comment?")
   
-//       if (confirmDelete) {
-//         // MAKE DELETE REQUEST
-//         const response = await axios.delete(`https://project2-react-app-server.adaptable.app/plants/${plantId}?_embed=comments`);
-//         console.log(response);
+      if (confirmDelete) {
+        // MAKE DELETE REQUEST
+        const response = await axios.delete(`https://project2-react-app-server.adaptable.app/comments/${comment.id}`);
+        console.log(response);
   
-//         // NAVIGATE TO PLANTS PAGE AFTER DELETION
-//         navigate(`/plants/${plantId}`);
-//       }
-//     } catch (error) {
-//       console.log(error)
-//     }
-//   };
+        // NAVIGATE TO PLANTS PAGE AFTER DELETION
+        navigate(`/plants/${plantId}`);
+      }
+    } catch (error) {
+      console.log("Error deleting comment", error)
+    }
+  };
   return (
     // RENDER COMMENT CARD
     <div className="comment-card">
@@ -31,14 +34,16 @@ function CommentCard({ comment }) {
         <p>{comment.text}</p>
     
 
-            {/* DELETE BUTTON
+            {/* DELETE BUTTON */}
             <button onClick={handleDelete}>
               Delete
-            </button> */}
+            </button>
 
+            <Link>
             <button>
                 Edit
             </button>
+            </Link>
     </div>
   )
 }
