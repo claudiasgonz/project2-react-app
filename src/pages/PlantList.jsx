@@ -13,7 +13,7 @@ function PlantList() {
   useEffect(() =>{
     const getAllPlants = async () => {
       try {
-        const response = await axios.get(`https://project2-react-app-server.adaptable.app/plants`) //axios makes http request
+        const response = await axios.get(`https://project2-react-app-server.adaptable.app/plants?_embed=comments`) //axios makes http request
       
         // UPDATE STATE WITH FETCHED DATA
         setPlants(response.data)

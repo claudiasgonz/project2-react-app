@@ -1,37 +1,40 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom"
 
 function AddCommentForm(props) {
+    // DEFINE STATE VARIABLES TO MANAGE FORM INPUTS
     const [title, setTitle] = useState("");
     const [username, setUsername] = useState("");
     const [text, setText] = useState("");
 
     const navigate = useNavigate();
 
+    // HANDLE FORM SUBMISSION
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        const plantId = props.plantId
+        const { plantId } = props;
 
+        const requestBody = { title, username, text, plantId }
+    // SEND POST REQUEST TO ADD A NEW COMMENT TO PLANTID
         try {
-            const response = await axios.post(`https://project2-react-app-server.adaptable.app/plants/${plantId}?_embed=comments`,
-            {
-                title,
-                username,
-                text
-            });
-        console.log(response);
+            const response = await axios.post(`https://project2-react-app-server.adaptable.app/comments`, requestBody);
+                setTitle("");
+                setUsername("");
+                setText("");
+                props.refreshPlant();
+            console.log(response);
 
-        navigate(`/plants/${plantId}`);
+            navigate(`/plants/${plantId}?_embed=comments`);
         } catch (error) {
         console.log(error)
-    }
-};
+        }
+    };
 
   return (
     <div className="add-comment-form">
-
+        <h2> Add a comment</h2>
         <form onSubmit={handleSubmit}>
             <label>Title:</label>
                 <input
@@ -65,11 +68,5 @@ function AddCommentForm(props) {
     </div>
   )
 }
-export default AddCommentForm
 
-// COMMENTS SECTION COMPONENT SHOULD:
-// LOAD COMMENT CARD FOR EACH COMMENT, 
-// ADD A COMMENT BUTTON IN COMMENTS COMPONENT
-// EACH COMMENT CARD HAS A DELETE BUTTON AND EDIT BUTTON
-// BUTTON IN COMMENT CARD POPS UP MODAL WITH ADD A COMMENT FORM
-// ADD A COMMENT FORM HAS FORM, SUBMIT BUTTON, CANCEL BUTTON
+export default AddCommentForm

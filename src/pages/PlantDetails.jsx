@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import axios from "axios";
-import CommentsSection from "../components/CommentsSection";
+import AddCommentForm from "../components/AddCommentForm";
+import CommentCard from "../components/CommentCard";
 
 
-function PlantDetails() {
+function PlantDetails(props) {
   // DEFINE STATE VARIABLE TO MANAGE PLANT DETAILS
   const [plant, setPlant] = useState();
 
@@ -18,8 +19,8 @@ function PlantDetails() {
   useEffect(() =>{
     const getSinglePlant = async () => {
       try {
-        const response = await axios.get(`https://project2-react-app-server.adaptable.app/plants/${plantId}`);
-      
+        const response = await axios.get(`https://project2-react-app-server.adaptable.app/plants/${plantId}?_embed=comments`);
+        console.log(response.data)
         setPlant(response.data); // UPDATE STATE WITH FETCHED DATA
       } catch (error) {
         console.log(error)
@@ -35,7 +36,7 @@ const handleDelete = async () => {
 
     if (confirmDelete) {
       // MAKE DELETE REQUEST
-      const response = await axios.delete(`https://project2-react-app-server.adaptable.app/plants/${plantId}`);
+      const response = await axios.delete(`https://project2-react-app-server.adaptable.app/plants/${plantId}?_embed=comments`);
       console.log(response);
 
       // NAVIGATE TO PLANTS PAGE AFTER DELETION
@@ -159,9 +160,17 @@ const handleDelete = async () => {
               Delete
             </button>
           </div>
+          
+          {/* <AddCommentForm refreshPlant={getSinglePlant} plantId={plantId} /> */}
+
+            {plant && plant.comments.length &&
+              plant.comments.map((comment) => (
+                <CommentCard comment={comment}/>
+              ))
+            }
 
           {/* COMMENTS SECTION */}
-            <CommentsSection />
+          <AddCommentForm plantId={plant.id}/>
         </>
       )}
     </div>
