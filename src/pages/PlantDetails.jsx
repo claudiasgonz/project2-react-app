@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+import CommentsSection from "../components/CommentsSection";
 
 
 function PlantDetails() {
@@ -158,6 +159,9 @@ const handleDelete = async () => {
               Delete
             </button>
           </div>
+
+          {/* COMMENTS SECTION */}
+            <CommentsSection />
         </>
       )}
     </div>

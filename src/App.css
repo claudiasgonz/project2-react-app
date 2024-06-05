@@ -137,6 +137,28 @@ button:hover {
   padding-top: 10px;
 }
 
+/* COMMENTS SECTION */
+.comments-section {
+
+}
+.comments-section h1 {
+
+}
+
+/* COMMENT CARD */
+.comment-card {
+  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 5px black;
+  margin: 10px;
+  text-align: left;
+}
+.comment-card h2 {
+  margin: 20px;
+  text-align: left;
+}
+
+
 
 /* ADD PLANT FORM IN ADD PLANT PAGE*/
 /* EDIT PLANT FORM IN EDIT PLANT PAGE*/
@@ -182,4 +204,3 @@ button:hover {
   margin-top: 10px;
   align-self: flex-end;
 }
-
