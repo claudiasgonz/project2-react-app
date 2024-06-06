@@ -31,20 +31,25 @@ function PlantList() {
     getAllPlants();
   }, []);
 
-  // ADD PLANT TO FAVORITES
+  // CORRE DESPUES DE QUE EL COMPONENT RENDERS
   useEffect(() => {
     console.log("These are the favorite plants", favorites);
-  }, [favorites]);
+  }, [favorites]); // USE EFFECT CORRE CUANDO 'FAVORITES' CAMBIE
 
-// FUNCION ANADE PLANTAS A LISTA DE FAVORITOS
+// FUNCTION TO ADD PLANT TO LIST OF FAVORITES
   const addToFavorites = (id) => {
     console.log("this is the id argument", id);
 
-    // 
+    // FIND PLANT ID WITH GIVEN ID FROM PLANTS ARR
     let thisFavorite = plants.find((plant) => plant.id === id);
-    // COMPARAR PARA NO REPETIR LA PLANTA FAVORITA EN LA LISTA NUEVA
+
+    // CHECK IF PLANT IS ALREADY IN FAV ARR
     let foundFavorite = favorites.find((favorite) => favorite.id === id);
+
+    // IF PLANT IS NOT IN FAV, ADD IT TO FAV ARR
     if (!foundFavorite) {
+      
+      // ADD THE NEW FAV AL PRINCIPIO DEL ARR
       setFavorites([thisFavorite, ...favorites]);
     }
   };
@@ -75,9 +80,9 @@ function PlantList() {
           );
         })}
       </div>
-      <h1> Favorite plants </h1>
+      <h1> My Garden </h1>
       <div> 
-        {/* RENDER PLANT CARD FOR EACH PLANT IN PLANT LIST */}
+        {/* RENDER PLANT CARD FOR EACH PLANT IN FAVORITE PLANT LIST */}
         {favorites.map((favorite) => {
           return (
             <FavoriteCard
