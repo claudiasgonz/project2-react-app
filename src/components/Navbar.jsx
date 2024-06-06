@@ -4,7 +4,7 @@ import SearchBarNav from "./SearchBarNav";
 function Navbar() {
   return (
     <nav className="navbar">
-      <img className="nav-img" src="https://res.cloudinary.com/daitiz1zj/image/upload/v1717627367/nav-logo_rq1mak.png" alt="logo" />
+      <img className="nav-img" src="https://res.cloudinary.com/daitiz1zj/image/upload/v1717705608/gardenfyLogoHoja_ksvzdw.png" alt="logo" />
 
           <Link to="/">
             <button>Home</button>
