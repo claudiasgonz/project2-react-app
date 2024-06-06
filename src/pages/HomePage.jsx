@@ -14,6 +14,7 @@ function Homepage() {
           <img src="https://res.cloudinary.com/daitiz1zj/image/upload/v1717634249/plantSpreads_72x_piupwf.png">
 
           </img>
+          
           <p>Learn about various plants that can be grown in Puerto Rico.</p>
         </div>
 

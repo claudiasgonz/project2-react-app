@@ -156,6 +156,26 @@ button:hover {
   margin: 10px;
   border-radius: 200px;
 }
+/* FAVORITES */
+.favorite-plant-card {
+  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 5px black;
+  padding: 30px;
+  margin: 15px;
+  text-align: center;
+  width: 250px;
+  height: 400px;
+  display: inline-block;
+  vertical-align: top;
+}
+.favorite-plant-card-img {
+  width: 250px;
+  height: 125px;
+  border-radius: 10%;
+  margin-bottom: 10px;
+  object-fit: cover;
+}
 
 /* PLANT DETAILS CARD RENDERED IN PLANT DETAILS PAGE */
 .plant-details-card {

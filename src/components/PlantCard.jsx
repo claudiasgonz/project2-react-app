@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-function PlantCard({ plant }) {
+function PlantCard({ plant, addToFavorites }) {
   return (
     <div className="plant-card">
       <Link key={plant.id} to={`/plants/${plant.id}`}>
@@ -14,7 +14,8 @@ function PlantCard({ plant }) {
         {/* <Link to="/favoriteplants"> */}
           <button
             type= "button"
-            className="plant-card-heart-btn">
+            className="plant-card-heart-btn"
+            onClick={() => addToFavorites(plant.id)}>
             <p>💚</p>
           </button>
         {/* </Link> */}

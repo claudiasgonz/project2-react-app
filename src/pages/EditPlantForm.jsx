@@ -265,6 +265,12 @@ function EditPlantPage(props) {
           {/* SUBMIT BUTTON */}
           <button type="submit">Update</button>
         </div>
+
+        {/* <div className="back-button-forms">
+          <button>
+            Cancel
+          </button>
+        </div> */}
       </form>
     </div>
   )

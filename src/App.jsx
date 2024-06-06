@@ -11,7 +11,6 @@ import NotFound from "./pages/NotFound";
 import EditPlantPage from "./pages/EditPlantForm";
 import AddPlantPage from "./pages/AddPlantPage";
 import FavoritePlants from "./pages/FavoritePlants";
-import { Toaster } from "react-hot-toast";
 
 function App() {
   return (
