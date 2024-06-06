@@ -8,6 +8,7 @@ function PlantDetails(props) {
   // DEFINE STATE VARIABLE TO MANAGE PLANT DETAILS
   const [plant, setPlant] = useState();
 
+  const navigate = useNavigate();
   // EXTRACT PLANTID FROM URL USING USEPARAMS HOOK
   const { plantId } = useParams();
 
@@ -175,7 +176,7 @@ function PlantDetails(props) {
           </div>
           <div>
             {/* COMMENTS LIST */}
-            <h2>Comments</h2>
+            <h2>Have you grown this plant? Share your experience below!</h2>
             {plant &&
               plant.comments.map((comment) => (
                 <CommentCard
@@ -186,9 +187,9 @@ function PlantDetails(props) {
               ))}
 
             {/* ADD COMMENT SECTION */}
-            <AddCommentForm
-              plantId={plant.id}
-              getSinglePlant={getSinglePlant}
+              <AddCommentForm
+                plantId={plant.id}
+                getSinglePlant={getSinglePlant}
             />
           </div>
         </>

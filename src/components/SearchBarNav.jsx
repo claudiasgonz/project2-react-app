@@ -3,7 +3,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-function SearchBarPlantList() {
+function SearchBarNav() {
     const [plantList, setPlantList] = useState([]);
     const navigate = useNavigate ();
   
@@ -35,15 +35,15 @@ function SearchBarPlantList() {
       };
     });
     return (
-        <div className="select-plant-list-pg">
+        <div className="select-nav">
           <Select 
             options={options}
             onChange={handleSelect}
-            placeholder="Search for a plant..."
+            placeholder="Search"
           />
         </div>
       )
     }
   
 
-export default SearchBarPlantList
+export default SearchBarNav

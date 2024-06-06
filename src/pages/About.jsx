@@ -3,15 +3,13 @@
 function About() {
   return (
     <div className="about">
-      <h1>About</h1>
+      <h1>About Garden.fy</h1>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Garden.fy is a web application designed to help users learn about various plants that can be grown in Puerto Rico. The platform offers detailed information on the specific needs and care instructions for each plant, making it easier for gardening enthusiasts to cultivate a variety of plants. 
+          <br/>
+          <br/>
+         In addition to accesing a database of plants, users can share their experiences and contribute to the database, fostering a collaborative community of plant lovers. 💚🌱
         </p>
-        {/* <img
-        className="about-img"
-        alt="about page image"
-        src="https://i.pinimg.com/474x/db/67/dc/db67dc14c4e2c009df42f1ea2adcd44f.jpg"
-        /> */}
     </div>
   )
 }

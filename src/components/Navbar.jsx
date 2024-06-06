@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import SearchBarNav from "./SearchBarNav";
 
 function Navbar() {
   return (
@@ -16,6 +17,9 @@ function Navbar() {
           <Link to="/plants">
             <button>Browse Plants</button>
           </Link> 
+
+          <SearchBarNav />
+
     </nav>
   )
 }

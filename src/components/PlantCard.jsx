@@ -11,13 +11,13 @@ function PlantCard({ plant }) {
       </Link>
 
       <div>
-        <Link to="/favoriteplants">
+        {/* <Link to="/favoriteplants"> */}
           <button
             type= "button"
             className="plant-card-heart-btn">
-            <p></p>
+            <p>💚</p>
           </button>
-        </Link>
+        {/* </Link> */}
 
       </div>
     </div>

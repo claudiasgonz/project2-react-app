@@ -38,7 +38,7 @@ function SearchBarHome() {
 
   return (
     <div className="select-home-pg">
-      <h2>Plants</h2>
+      <h2>Garden.fy</h2>
       <p> Discover new plants and contribute to our botanical database.</p>
       <Select 
         options={options}

@@ -1,13 +1,23 @@
 body {
   font-family: monospace;
-  text-align: center;
   background-color: white;
+  text-align: center;
 }
 
 /* REMOVES HYPERLINK STYLES TO TEXT */
 a {
   text-decoration: none;
   color: black;
+}
+/* NAVBAR */
+.navbar {
+
+}
+
+.select-nav {
+width: 200px;
+margin-left: 10px;
+display: inline-block;
 }
 
 /* FOOTER */
@@ -63,18 +73,61 @@ button:hover {
   text-align: left;
 }
 
+/* HOME PAGE: ABOUT SECTION */
+.about-home-page {
+  display: flex;
+}
+
+.about-home-column-1 {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  margin-bottom: 40px;
+  flex: 1;
+  height: 150px;
+}
+
+.about-home-column-2 {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  margin-bottom: 40px;
+  flex: 1;
+  height: 150px;
+}
+
+.about-home-column-3 {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  margin-bottom: 40px;
+  flex: 1;
+  height: 150px;
+}
+
+@media (max-width: 600px) {
+  .about-home-page {
+    flex-direction: column;
+    height: 600px;
+  }
+}
 /* ABOUT PAGE */
 .about {
   border: 1px solid black;
   border-radius: 10px;
   padding: 20px;
-  margin: 10px;
+  margin: 50px;
+  text-align: left;
 }
 
 /* PLANT LIST PAGE */
 .select-plant-list-pg {
   padding-left: 150px;
   padding-right: 150px;
+  padding-top: 30px;
 }
 
 /* PLANT CARD RENDERED IN PLANT LIST PAGE */
@@ -98,9 +151,10 @@ button:hover {
   margin-bottom: 10px;
   object-fit: cover;
 }
+
 .plant-card-heart-btn {
   margin: 10px;
-  border-radius: 100%;
+  border-radius: 200px;
 }
 
 /* PLANT DETAILS CARD RENDERED IN PLANT DETAILS PAGE */

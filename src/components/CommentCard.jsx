@@ -29,15 +29,15 @@ function CommentCard({ comment, plantId, getSinglePlant }) {
     // RENDER COMMENT CARD
     <div className="comment-card">
       <h3>{comment.title}</h3>
-      <h4>{comment.username}</h4>
+      <h4>Contributed by: {comment.username}</h4>
       <p>{comment.text}</p>
 
       {/* DELETE BUTTON */}
       <button onClick={handleDelete}>Delete</button>
 
-      <Link>
+      {/* <Link>
         <button>Edit</button>
-      </Link>
+      </Link> */}
     </div>
   );
 }

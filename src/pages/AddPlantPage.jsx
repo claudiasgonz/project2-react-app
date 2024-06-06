@@ -61,7 +61,7 @@ function AddPlantPage(props) {
             console.log(response);
 
             // NAVIGATE TO "/PLANTS" PAGE AFTER SUCCESSFUL SUBMISSION
-            navigate("/comments");
+            navigate("/plants");
         } catch (error) {
             console.log(error)
         }
