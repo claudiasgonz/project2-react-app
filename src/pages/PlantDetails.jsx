@@ -63,83 +63,98 @@ function PlantDetails(props) {
 
           <p className="plant-details-list">
             <li>
-              <img src=""></img>
-              <strong>Sun Requirements:</strong>
+              <img src="https://res.cloudinary.com/daitiz1zj/image/upload/v1717634251/sunlught_Req-Sun_72x_w9i94a.png"></img>
+              <strong> Sun Requirements: </strong>
               {plant.sunlightRequirements}
             </li>
 
             <li>
-              <strong>🌡️ Temperature / Climate:</strong>
+              <img src="https://res.cloudinary.com/daitiz1zj/image/upload/v1717634251/temperatureClimate_72x_rvwkz9.png"></img>
+              <strong> Temperature / Climate: </strong>
               {plant.temperatureClimate}
             </li>
 
             <li>
-              <strong>Watering Needs:</strong>
+              <img src="https://res.cloudinary.com/daitiz1zj/image/upload/v1717634252/wateringNeeds_72x_w3nfgn.png"></img>
+              <strong> Watering Needs: </strong>
               {plant.wateringNeeds}
             </li>
 
             <li>
-              <strong>Soil Type:</strong>
+              <img src="https://res.cloudinary.com/daitiz1zj/image/upload/v1717634247/fertilizerNeeds_72x_etse13.png"></img>
+              <strong> Soil Type: </strong>
               {plant.soilType}
             </li>
 
             <li>
-              <strong>Bloom Time:</strong>
+            <img src="https://res.cloudinary.com/daitiz1zj/image/upload/v1717634247/bloomTime_72x_za7dm4.png"></img>
+              <strong> Bloom Time: </strong>
               {plant.bloomTime}
             </li>
 
             <li>
-              <strong>Plant Height:</strong>
+              <img src="https://res.cloudinary.com/daitiz1zj/image/upload/v1717634249/plantHeight_72x_bnxkyi.png"></img>
+              <strong> Plant Height: </strong>
               {plant.plantHeight}
             </li>
 
             <li>
-              <strong>Plant Spread:</strong>
+            <img src="https://res.cloudinary.com/daitiz1zj/image/upload/v1717634249/plantSpreads_72x_piupwf.png"></img>
+              <strong> Plant Spread: </strong>
               {plant.plantSpread}
             </li>
 
             <li>
-              <strong>Growth Rate:</strong>
+              <img src="https://res.cloudinary.com/daitiz1zj/image/upload/v1717634247/growthRate_72x_nyku3z.png"></img>
+              <strong> Growth Rate: </strong>
               {plant.growthRate}
             </li>
 
             <li>
-              <strong>USDA Hardiness Zone:</strong>
+              <img src="https://res.cloudinary.com/daitiz1zj/image/upload/v1717634248/hardinessZone_72x_lqef1d.png"></img>
+              <strong> USDA Hardiness Zone: </strong>
               {plant.hardinessZone}
             </li>
 
             <li>
-              <strong>Maintenance Level:</strong>
+              <img src="https://res.cloudinary.com/daitiz1zj/image/upload/v1717634248/maintenanceLevel_72x_yfs1jz.png"></img>
+              <strong> Maintenance Level: </strong>
               {plant.maintenanceLevel}
             </li>
 
             <li>
-              <strong>Companion Plants:</strong>
+              <img src="https://res.cloudinary.com/daitiz1zj/image/upload/v1717634247/companionPlants_72x_b4wf1r.png"></img>
+              <strong> Companion Plants: </strong>
               {plant.companionPlants}
             </li>
 
             <li>
-              <strong>Pests / Diseases:</strong>
+              <img src="https://res.cloudinary.com/daitiz1zj/image/upload/v1717634248/pestDiseases_72x_fm9oft.png"></img>
+              <strong> Pests / Diseases: </strong>
               {plant.pestsDiseases}
             </li>
 
             <li>
-              <strong>Edible Parts:</strong>
+              <img src="https://res.cloudinary.com/daitiz1zj/image/upload/v1717634247/edibleParts_72x_p1xveg.png"></img>
+              <strong> Edible Parts: </strong>
               {plant.edibleParts}
             </li>
 
             <li>
-              <strong>Propagation Methods:</strong>
+              <img src="https://res.cloudinary.com/daitiz1zj/image/upload/v1717634249/propagationMethods_72x_ylsvtf.png"></img>
+              <strong> Propagation Methods: </strong>
               {plant.propagationMethods}
             </li>
 
             <li>
-              <strong>Fertilizer Needs:</strong>
+              <img src="https://res.cloudinary.com/daitiz1zj/image/upload/v1717634247/applehighPotassiumFertilizer_72x_v9pgpr.png"></img>
+              <strong> Fertilizer Needs: </strong>
               {plant.fertilizerNeeds}
             </li>
 
             <li>
-              <strong>Special Features:</strong>
+              <img src="https://res.cloudinary.com/daitiz1zj/image/upload/v1717634250/specialFeatures_72x_los1wj.png"></img>
+              <strong> Special Features: </strong>
               {plant.specialFeatures}
             </li>
           </p>

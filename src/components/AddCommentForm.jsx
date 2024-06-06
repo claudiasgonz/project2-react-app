@@ -65,10 +65,11 @@ function AddCommentForm(props) {
           value={text}
           onChange={(e) => setText(e.target.value)}
         />
+        <div className="add-comment-buttons">
+            <button>Cancel</button>
 
-        <button>Cancel</button>
-
-        <button type="submit">Submit Comment</button>
+            <button type="submit">Submit Comment</button>
+        </div>
       </form>
     </div>
   );
